@@ -22,3 +22,8 @@
     margin: 0 auto;
     margin-bottom:10px;
   }
+  .buy-now:hover {
+    background-color: rgb(77, 77, 77);
+    cursor: pointer;
+    cursor: hand;
+  }
