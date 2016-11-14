@@ -1,0 +1,24 @@
+.buy-now {
+    background-color: rgb(31, 31, 31);
+    margin-bottom: 10px;
+    border: none;
+    width:calc(100% - 10px);
+    color: white;
+    padding-left: 52px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 52px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: "europa";
+    -webkit-transition: background-color 0.25s ease;
+    /* For Safari 3.1 to 6.0 */
+    transition: background-color 0.25s ease;
+    letter-spacing: 0.5px;
+    line-height: 25.6px;
+     display: table;
+    margin: 0 auto;
+    margin-bottom:10px;
+  }
