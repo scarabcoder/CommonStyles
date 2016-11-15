@@ -1,31 +1,73 @@
 <style>
 #main-content-panel {
-  border:2px solid black;
   width:100%;
   padding:25px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+  text-align:center;
+  height:50%;
 }
 
 #text-content-left {
-  float:left;
-  border:2px solid black;
+  display:inline-block;
+  padding:15px;
+  color: 846642;
+    font-family: "Arial Black";
+    float:left;
+}
+.header1 {
+  font-size:1.25em;
+  letter-spacing:1px;
+  word-spacing:2px;
 }
 #picture-right {
+  margin-left:20px;
+  margin-top:15 px;
+  text-align:center;
+  display:inline-block;
+  background-size: cover;
+  height:100%;
   float:right;
-  border:2px solid black;
+  -webkit-box-shadow: 7px 11px 41px -8px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 11px 41px -8px rgba(0,0,0,0.75);
+box-shadow: 7px 11px 41px -8px rgba(0,0,0,0.75);
+  border-radius:5px;
+
 }
-#center-content-panel {
+.header1 span {
+  color:#789F9E;
+}
+
+#center-text {
+  padding:0px;
   margin: 0 auto;
+  text-align:center;
+  list-style-position: inside;
+  list-style-image: url("checkmark.png");
+  list-style-type:circle;
+}
+#center-text img {
+  width:25px;
+}
+#center-area {
+  display:inline-block;
+  height:100%;
+    padding: 20px;
 }
 </style>
-
 <div id="main-content-panel">
-  <div id="center-content-panel"
-    <div id="text-content-left">
+  <div id="center-area">
+      <div id="text-content-left" class="item-fit">
+        <img id="image-resize" src="https://github.com/scarabcoder/CommonStyles/raw/master/madeon-logo.png">
+        <p class="header1">Fix your dry, cracked <br>skin in <span>7</span> days... for $12!</p>
+        <p>Dry skin repair kit includes:</p>
+        <div id="center-text" class="item-fit">
+          <p><img src="checkmark.png">Guest Size Goat Milk Soap</p>
+          <p><img src="checkmark.png">Pocket Size Beesilk Bar</p>
+          <p><img src="checkmark.png">Natural Lip Balm</p>
+        </div>
+      </div>
+      <img id="picture-right" src="lotion.jpg">
     </div>
-    <div id="picture-right">
-    </div>
-  </div>
 </div>
