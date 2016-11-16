@@ -1,73 +1,109 @@
 <style>
-#main-content-panel {
+@font-face {
+  font-family: 'nexa';
+  src: url('Nexa Bold.otf'); /* IE9 Compat Modes */
+}
+#side-float-left {
+  vertical-align: center;
+}
+#side-float-right {
+}
+#side-float-right img {
   width:100%;
-  padding:25px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-  text-align:center;
-  height:50%;
 }
 
-#text-content-left {
+div{
+  border:5px dotted black;
+}
+
+div > div{
+  border:4px solid black;
+}
+
+div > div > div{
+  border:3px solid black;
+}
+
+div > div > div > div{
+  border:2px solid black;
+}
+#centered-area {
+  margin:0 auto;
+  text-align:center;
+  font-family:"nexa";
+  color: #FF7F19;
+  display: flex;
+}
+.contain-element {
+  padding:10px;
+  margin: 0px;
   display:inline-block;
-  padding:15px;
-  color: 846642;
-    font-family: "Arial Black";
-    float:left;
+  vertical-align: middle;
+  flex: 1;
+}
+#side-float-left img {
+  width:75%;
 }
 .header1 {
-  font-size:1.25em;
-  letter-spacing:1px;
-  word-spacing:2px;
-}
-#picture-right {
-  margin-left:20px;
-  margin-top:15 px;
-  text-align:center;
-  display:inline-block;
-  background-size: cover;
-  height:100%;
-  float:right;
-  -webkit-box-shadow: 7px 11px 41px -8px rgba(0,0,0,0.75);
--moz-box-shadow: 7px 11px 41px -8px rgba(0,0,0,0.75);
-box-shadow: 7px 11px 41px -8px rgba(0,0,0,0.75);
-  border-radius:5px;
+  font-size:3vw;
+  font-weight:bold;
 
 }
-.header1 span {
-  color:#789F9E;
+.header1 > span {
+  text-transform: uppercase;
+  color: #FF7100;
+  font-size:120%;
 }
-
-#center-text {
-  padding:0px;
-  margin: 0 auto;
-  text-align:center;
+#centered-area ul {
+  list-style: none;
   list-style-position: inside;
-  list-style-image: url("checkmark.png");
-  list-style-type:circle;
+  margin: 0 auto;
+  padding:0px;
+
 }
-#center-text img {
-  width:25px;
+#centered-area li {
+    position: relative;
+    margin-bottom:5px;
+    padding-top:2px;
+    font-size:2.3vw;
+    color:#009AB2;
 }
-#center-area {
-  display:inline-block;
-  height:100%;
-    padding: 20px;
+
+#centered-area li:before {
+    /*
+    The desired width gets defined in two places: The element width, and background size.
+    The height only gets defined once, in background size.
+    */
+    --checksize: 1.25em;
+    display: inline-block;
+    margin-right:10px;
+    content: '\2022'; /* bullet point, for screen readers */
+    text-indent: -999999px; /* move the bullet point out of sight */
+    width: var(--checksize); /* desired width of the image */
+    height: calc(1.5 * var(--checksize)); /* unrelated to image height; this is so it gets snipped */
+    background-repeat: no-repeat;
+    background-image: url('https://github.com/scarabcoder/CommonStyles/raw/master/checkmark.png');
+    content:url('http://i.stack.imgur.com/Icd9n.png'); /* 21x21 transparent pixels */
+    background-size: 100%;
+    background-position: center;
+    vertical-align: center;
 }
 </style>
-<div id="main-content-panel">
-  <div id="center-area">
-      <div id="text-content-left" class="item-fit">
-        <img id="image-resize" src="https://github.com/scarabcoder/CommonStyles/raw/master/madeon-logo.png">
-        <p class="header1">Fix your dry, cracked <br>skin in <span>7</span> days... for $12!</p>
-        <p>Dry skin repair kit includes:</p>
-        <div id="center-text" class="item-fit">
-          <p><img src="checkmark.png">Guest Size Goat Milk Soap</p>
-          <p><img src="checkmark.png">Pocket Size Beesilk Bar</p>
-          <p><img src="checkmark.png">Natural Lip Balm</p>
-        </div>
-      </div>
-      <img id="picture-right" src="lotion.jpg">
-    </div>
+
+
+<div id="centered-area">
+
+  <div id="side-float-left" class="contain-element">
+    <img src="https://github.com/scarabcoder/CommonStyles/raw/master/madeon-logo.png">
+    <p class="header1">Fix Your Dry, Cracked Skin In </br><span>7</span> days... For Just $12!</p>
+    <ul>
+      <li>Guest Size Goat Milk Soap</li>
+      <li>Pocket Size Beesilk Bar</li>
+      <li>Natural Lip Balm</li>
+    </ul>
+  </div>
+  <div id="side-float-right" class="contain-element" src="https://github.com/scarabcoder/CommonStyles/raw/master/lotion.jpg">
+    <img src="https://github.com/scarabcoder/CommonStyles/raw/master/lotion.jpg">
+
+  </div>
 </div>
